@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+class myless{
+    int val;
+    public:
+    myless(int v) : val (v) {}
+    int operator() (int v) {
+        return v < val;
+        }
+};
+int main()
+{
+    myless less_than_five(5);
+    cout << "2 is less than 5: " << (less_than_five(2) ? "yes" : "no");
+    return 0;
+}
+

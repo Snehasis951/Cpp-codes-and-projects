@@ -1,0 +1,30 @@
+#include<vector> 
+#include<string> 
+#include<algorithm>
+#include<assert.h> 
+#include<iostream> 
+using namespace std;
+
+template<class T> void print(vector<T>v)
+{
+    for(int i=0;i<v.size();i++) cout<<v[i]<<"\t";cout<<endl;
+}
+int main()
+{
+    vector<int>vi; vector<string>vs; int i;
+    for(i=0;i<20;i++) vi.push_back(i);
+    assert(!vi.empty()); print(vi);
+    
+    cout<<"changing values of elements in range 3 through 7...\n";
+    for(i=3;i<8;i++) vi[i]=100; print(vi);
+    
+    cout<<"Removing elements\n";
+    vi.erase(vi.begin()+11, vi.begin()+15); print(vi);
+    
+    vs.push_back("John"); vs.push_back("Tom"); vs.push_back("Amita"); vs.push_back("Kavita");
+    print(vs);
+    
+    cout<<"\nSorting elements..\n"; sort(vs.begin(), vs.end()); print(vs);
+    
+    cout<<"\nRemoving elements..\n"; vs.pop_back(); print(vs);
+}

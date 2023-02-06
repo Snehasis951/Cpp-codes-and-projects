@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+class  A {
+    public:
+    A() {cout<<"constr\n";}
+    ~A()
+    {
+        cout<<"destr #1\n";
+        if(/*error cond8*/) throw int(99);
+        cout<<"destr #2\n";
+    }
+};
+int main()
+{
+    try{
+        A aobj;
+        if(/*error cond*/) throw char('s');
+    }
+    catch(int ch) { cout<<"exc::"<<ch<<"\n";}
+    catch(char ch) { cout<<"exc::"<<ch<<"\n";}
+}

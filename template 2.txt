@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+template<class T>
+void f(T a)
+{
+    cout<<"inside Template "<<a<<endl;
+}
+void f(char c)
+{
+    cout<<"non in template "<<c<<endl;
+}
+int main()
+{
+    f(20);
+    f('S');
+    f(27.24);
+}

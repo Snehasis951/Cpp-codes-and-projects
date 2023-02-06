@@ -1,0 +1,39 @@
+#include<iostream>
+#include<assert.h>
+using namespace std;
+
+class X
+{
+  int nonmut;
+  mutable int mut;
+public:
+    X ()
+  {
+    mut = 9;
+    nonmut = 77;
+  }
+  void f () const
+  {
+    cout << "f\n";
+    mut = 19;
+  }
+  void g () const
+  {
+    cout << "g\n";
+    mut = 88;
+  }
+  void disp () const
+  {
+    cout << mut << endl;
+  }
+};
+
+int
+main ()
+{
+  const X o;
+  o.disp ();
+  o.f ();
+  o.disp ();
+  o.g ();
+}

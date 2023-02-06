@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+template<class T>
+class X{
+    T a;
+    int x;
+    friend void f();
+};
+class Z{};
+void f()
+{
+    X<int> obj; obj.x=9;
+    X<float>obj1; obj1.x=9;
+    X<Z>obj2; obj2.x=9;
+}
+int main()
+{
+    f();
+}

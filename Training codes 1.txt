@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    int A = 0x1;
+    printf("left shift : %x\n",A<<2);
+    printf("right shift : %x\n",A>>2);
+    printf("\n");
+    A = 0xffffffffff;
+    printf("left shift : %x\n",A<<2);
+    printf("right shift : %x\n",A>>2);
+    printf("\n");
+    A = 0x80000000;
+    printf("A : %x\n",A);
+    printf("left shift : %x\n",A<<2);
+    printf("right shift : %x\n",A>>2);
+    printf("\n");
+    A = 0x7fffffff;
+    printf("A : %x\n",A);
+    printf("NOT A : %x\n",~A);
+    printf("left shift : %x\n",A<<2);
+    printf("left shift : %x\n",A<<2);
+    printf("right shift : %x\n",A>>2);
+    printf("\n");
+
+ return 0;
+}
+

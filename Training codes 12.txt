@@ -1,0 +1,17 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    char ar[5][50], *aroptr[5];
+    for(int i = 0; i < 4; i++){
+        aroptr[i] = ar[i];
+        cin >> aroptr[i];
+        cout << i+1 << " " << aroptr[i] << endl;
+        *aroptr[i] = '#';
+        aroptr[i][1] = '$';
+        cout << i+1 << " " << aroptr[i] << endl;
+        }
+        return 0;
+}
+

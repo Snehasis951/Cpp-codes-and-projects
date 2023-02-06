@@ -1,0 +1,23 @@
+#include <iostream>
+#include<string.h>
+using namespace std;
+
+int main()
+{
+    char a1[20],a2[20];
+    int i=0;
+    sprintf(a1,"%d is an integer",i);
+    strcpy(a1,a2);
+    printf("a2 contains: %s\n",a2);
+    strcat(a1,"Bye");
+    printf("a1 is now: %s\n",a1);
+    printf("%d is the length of the string a2\n",strlen(a2));
+    strcpy(a1,"AAA");
+    strcpy(a2,"BBB");
+    if(strcmp(a1,a2)>0)
+        printf("string a1 is lexically greater than a2\n");
+    else
+        printf("string a2 is lexically greater than a1\n");
+        
+    
+}

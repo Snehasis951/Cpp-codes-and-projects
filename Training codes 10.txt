@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int same = 20;
+void func()
+{
+    cout << "FUNC" << same << endl;
+}
+int main(){
+    int sm = 10;
+    func();
+    cout << "MAIN" << same << endl;
+    return 0;
+}
+

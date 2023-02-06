@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+class CI 
+{
+    public: class exc{};
+        CI(){
+            cout<<"in constr\n";
+            throw exc();
+            cout<<"exception throw\n";
+        }
+        ~CI(){cout<<"in destr\n";}
+};
+int main()
+{
+    try
+    {CI obj;}
+    catch(CI::exc E){cout<<"exception caught";}
+}

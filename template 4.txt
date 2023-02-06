@@ -1,0 +1,49 @@
+
+
+#include <iostream>
+
+using namespace std;
+template<class T, int def = 90>
+class stack {
+    T *arr;
+    int top;
+    public:
+    stack(int size = def){
+        cout<<size<<endl;
+        arr = new T[size];
+        top = -1;
+        }
+        void push(T ele);
+        T pop();
+};
+
+template<class T1, class T, int def1 = 10>
+class sp_stack1 : public stack<T, def1>{
+    public:
+    void f(T1 t1, T t2){
+        cout<<t1<<" "<<t2<<endl;
+        }
+};
+
+template<class T1, class T>
+class sp_stack2 : public stack<T>{
+    public:
+    void f(T1 t1, T t2){
+        cout<<t1<<" "<<t2<<endl;
+        }
+};
+
+int main()
+{
+    stack<int> st_int(30);
+    stack<char, 40> st_char1;
+    sp_stack1<int, double> spint;
+    sp_stack1<char, double, 33> spchar;
+    sp_stack2<char, char> cpCharChar;
+    int i = 323;
+    double d = 2.5;
+    spint.f(i,d);
+
+ return 0;
+}
+

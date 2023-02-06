@@ -1,0 +1,32 @@
+#include<list>
+#include<string>
+#include<assert.h>
+#include<iostream>
+
+using namespace std;
+template<class T> void print(list<T>l)
+{
+    typename list<T>:: iterator it=l.begin();
+    while(it != l.end()) cout<<*it++<<"\t"; cout<<endl;
+}
+int main()
+{
+    list<int> li; list<string>ls; int i;
+    for(i=0;i<20;i++) li.push_back(i);
+    print(li);
+    cout<<"Removeing first 5 elements...\n";
+    for(i=0;i<5;i++)
+        {cout<<li.front()<<"removed\n"; li.pop_front();}
+    cout<<endl; print(li);
+    cout<<"Removing 7 and 12 from the list......\n";
+    li.remove(7); li.remove(12); print(li);
+    li.clear(); assert(li.empty());
+    
+    ls.push_back("John"); ls.push_front("Anna");
+    ls.push_back("Anna"); ls.push_front("John"); print(ls);
+    cout<<"\nSorting elements.....\n"; ls.sort();
+    print(ls);
+    
+    cout<<"\nRemoving duplicate elements....\n";
+    ls.unique(); print(ls);
+}

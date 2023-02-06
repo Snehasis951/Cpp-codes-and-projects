@@ -1,0 +1,27 @@
+#include<iostream>
+
+using namespace std;
+
+class item{
+    int number;
+    float cost;
+    public:
+        void getdata(int number, float cost){
+            this->number = number;
+            this->cost = cost;
+        }
+        void displaydata(){
+            cout<<"Product no: "<<number<<", price: "<<cost<<endl;
+        }
+};
+
+int main()
+{
+    item item1,item2;
+    item1.getdata(10,12.6);
+    item2.getdata(13,7.8);
+    item1.displaydata();
+    item2.displaydata();
+    
+    return 0;
+}

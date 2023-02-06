@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+template<class T> class Allocator
+{
+    public: class Exhausted{};
+    T*get(){}
+    void f(int i) {cout<<"in f\n"; if(i==10) throw Exhausted();}
+};
+void f(Allocator<int> &ai, Allocator<double> &ad)
+{
+    try{ai.f(10); ad.f(1);}
+    // try{ai.f(1); ad.f(10);}
+    catch(Allocator<int>::Exhausted){cout<<"int ver\n";}
+    catch(Allocator<double>::Exhausted){cout<<"double ver\n";}
+}
+int main()
+{
+    Allocator<int> aInt; Allocator <double> aDbi;
+    
+    f(aInt, aDbi);
+}

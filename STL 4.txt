@@ -1,0 +1,10 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+    vector<long> coll;
+    coll.push_back(6); coll.push_back(9);
+    vector<long>::iterator itr;
+    for(itr=coll.begin(); itr !=coll.end();++itr)  cout<<*itr;
+}

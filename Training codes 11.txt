@@ -1,0 +1,16 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+int sm = 10;
+void func(){
+    cout << "FUNC :: " << sm << endl;
+}
+int main(){
+    struct{
+        int m;
+        }sm;
+        func();
+        sm.m = 67;
+        cout << "MAIN :: " << sm.m << endl;
+}
+

@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int i ;char ch;
+    for(i=2,ch='d';i<5,ch<'g';i++,ch++)
+    cout<<i<<"\t"<<ch<<endl;
+   return 0;
+}

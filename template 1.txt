@@ -1,0 +1,16 @@
+#include<iostream>
+template<class T>
+void swap(T &x1, T &x2)
+{
+    T temp = x1;
+    x1=x2;x2=temp;
+    std::cout<<x1<<"\t"<<x2<<"\n";
+}
+int main()
+{
+    int p = 20, q = 40;
+    swap(p,q);
+    char x='X', y = 'Y';
+    swap(x,y);
+    return 0;
+}

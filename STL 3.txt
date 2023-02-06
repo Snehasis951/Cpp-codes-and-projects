@@ -1,0 +1,38 @@
+#include <iostream>
+#include<map>
+#include<string>
+using namespace std;
+
+template<class T1 , class T2>
+void print(map <T1 , T2> m) {
+    typename map<T1 , T2> :: iterator p = m.begin();
+    while(p != m.end()){
+        cout << p->first << "\t" << p-> second << "\n";
+        p++;
+        }
+        cout << endl;
+}
+
+int main() {
+    map <string , string> m;
+    m["Raj"] = "555-1234";
+    m["Radha"] = "797-3456";
+    m["Anita"] = "990-8901";
+    print(m);
+    m.insert(pair<string,string>("Akash" , "123-4567"));
+    map<string,string> :: iterator p = m.find("Radha");
+    if(p != m.end()){
+        cout << p->first << "\t" << p->second << endl;
+        }
+        else {
+            cout << "Key Radha not in map.\n";
+            }
+            p = m.find("Tomy");
+            if(p != m.end()) {
+                cout << p->first << "\t" << p->second << endl;
+                }
+                else{
+                    cout << "Key Tomy not in map.\n";
+                    }
+}
+

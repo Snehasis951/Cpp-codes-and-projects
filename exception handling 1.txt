@@ -1,0 +1,26 @@
+#include<iostream>
+
+using namespace std;
+
+class stack{
+    int arr[2], top;
+    public:stack(){top=-1;}
+    class full{}; class empty{};
+    void push(int i){
+        if(top==1) throw full();
+        top++; arr[top]=i;
+    }
+    int pop(){
+        if(top==-1) throw empty();
+        else{top--; return 1;
+    } }
+};
+int main()
+{
+    stack s;
+    try{ s.push(1); cout<<"1\n";
+    s.push(2); cout<<"2\n";
+    s.push(3); cout<<"3\n";
+}
+catch(stack::full f){cout<<"full\n";}
+}
